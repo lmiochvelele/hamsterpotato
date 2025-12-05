@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamster Potato 成長紀錄</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #fafafa;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      padding-bottom: 20px;
+      transition: 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: #ffcc70;
+      color: black;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hamster Potato 家族成長紀錄</h1>
+
+  <div class="grid">
+    <div class="card">
+      <img src="image/ham1.jpg" alt="Hamster 1" />
+      <a href="ham1/diary.html">查看成長日記</a>
+    </div>
+    <div class="card">
+      <img src="image/ham2.jpg" alt="Hamster 2" />
+      <a href="ham2/diary.html">查看成長日記</a>
+    </div>
+    <div class="card">
+      <img src="image/ham3.jpg" alt="Hamster 3" />
+      <a href="ham3/diary.html">查看成長日記</a>
+    </div>
+    <div class="card">
+      <img src="image/ham4.jpg" alt="Hamster 4" />
+      <a href="ham4/diary.html">查看成長日記</a>
+    </div>
+  </div>
+
+</body>
+</html>
