@@ -4,9 +4,6 @@
 <meta charset="UTF-8">
 <title>薯泥畢業典禮</title>
 <style>
-body { font-family: "Microsoft JhengHei", sans-serif; text-align: center; padding: 20px; background-color: #fff8e8; }
-h1 { margin-top: 60px; color: #d67b33; }
-
 .back-home {
     position: fixed;
     top: 20px;
@@ -32,49 +29,108 @@ h1 { margin-top: 60px; color: #d67b33; }
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.bottom-btn {
-    display: inline-block;
-    margin: 30px auto 20px auto;
-    padding: 12px 28px;
-    border-radius: 25px;
-    background: linear-gradient(135deg, #555555, #333333);
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
+  body {
+    background: #2f2f2f;                 /* 黯淡背景 */
+    color: #f0e6d2;                      /* 柔和字色 */
+    font-family: "Noto Sans TC", sans-serif;
+    padding: 20px;
+    line-height: 1.7;
+  }
 
-img {
-    max-width: 90%;
-    margin: 20px auto;
-    display: block;
+  .page-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05); 
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffe8b6;
+  }
+
+  .description {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .memorial-photo {
+    width: 100%;
     border-radius: 12px;
-}
+    margin: 20px 0;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+  }
+
+  .video-container {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  iframe {
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+  }
+
+  .google-form {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .google-form a {
+    background: #7a6f63;
+    padding: 12px 28px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: 0.3s;
+  }
+
+  .google-form a:hover {
+    background: #b19d86;
+  }
+
+    
 </style>
 </head>
 <body>
-
+<div class="page-container">
 <a class="back-home" href="index.html">← 回首頁</a>
 
 <h1>🐹 薯泥畢業典禮</h1>
 
 <!-- 中間返回成長日記 -->
-<a class="middle-btn" href="hamster1.html">← 回成長日記</a>
+<a class="middle-btn" href="hamster1.html">← 回薯泥成長日記</a>
 
-<!-- 假設畢業照片 -->
-<img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/100001.jpg" alt="畢業典禮照片">
+ <p class="description">
+    我愛薯泥
+  </p>
 
-  <!--
-<ul>
-<li>2025/05/01：完成社交訓練，健康狀態良好 🐹</li>
-<li>2025/06/01：參加小型鼠鼠派對 🎉</li>
-<li>2025/07/01：結束育成日記，進入自由生活 ✨</li>
-</ul>
--->
-  
-<!-- 最下面按鈕 
-<a class="bottom-btn" href="hamster1.html">← 回成長日記</a>
--->
-    
+  <!-- 告別式照片 -->
+  <img src="your_photo.jpg" class="memorial-photo" alt="薯泥的畢業典禮照片">
+
+  <!-- 影片（YouTube / Google Drive 都可以） -->
+  <div class="video-container">
+    <iframe 
+      src="你的影片網址" 
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Google 表單留言 -->
+  <div class="google-form">
+    <p>想對薯泥說的話：</p>
+    <a href="你的Google表單連結" target="_blank">前往留言 💛</a>
+  </div>
+</div>    
 </body>
 </html>
