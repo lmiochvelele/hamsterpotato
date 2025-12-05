@@ -118,7 +118,7 @@ padding: 25px;
 }
 
 .album-container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 30px auto;          /* 上下間距30px，左右置中 */
   display: flex;
   flex-wrap: wrap;
@@ -134,25 +134,25 @@ padding: 25px;
 
 .frame {
   position: relative;
-  width: 200px;               /* 整個相簿卡片寬度 */
+  width: 200px;   /* 整個卡片寬度 = 底圖寬度 */
   text-align: center;
 }
 
 .frame-img {
-  width: 100%;
-  display: block;
+  width: 100%;    /* 底圖寬度填滿卡片 */
   border-radius: 12px;
 }
 
 .cover-img {
   position: absolute;
-  top: 20px;                  /* 調整縮圖位置 */
-  left: 15px;
-  width: 170px;
-  height: 120px;
+  top: 20px;      /* 縮圖在卡片內的垂直位置 */
+  left: 15px;     /* 縮圖在卡片內的水平位置 */
+  width: 170px;   /* 縮圖寬度 */
+  height: 120px;  /* 縮圖高度 */
   object-fit: cover;
   border-radius: 8px;
 }
+
 
 .frame p {
   position: absolute;
