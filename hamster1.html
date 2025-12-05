@@ -98,7 +98,13 @@ padding: 25px;
     text-decoration: none;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-  
+/* 相簿區 */
+.album-container { max-width:900px; margin:30px auto; display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+.album-card { width:200px; text-align:center; text-decoration:none; color:black; }
+.album-card img { width:100%; border-radius:15px; box-shadow:0 6px 12px rgba(0,0,0,0.15); margin-bottom:8px; }
+.album-card:hover img { box-shadow:0 8px 18px rgba(0,0,0,0.2); transform: scale(1.03); transition:0.3s; }
+.album-card p { font-size:16px; color:#555; margin:0; }
+    
 img {
     width: 80%;
     max-width: 500px;
@@ -135,26 +141,27 @@ img {
   </div>
 </div>
 
-<div class="photo-group">
-    <!-- 左邊：10張照片 -->
-    <div class="group-photos">
-        <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/100001.jpg" alt="">
-        <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/100001.jpg" alt="">
-        <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/200001.jpg" alt="">
-        <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/300001.jpg" alt="">
-        <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/400001.jpg" alt="">
-        <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/200001.jpg" alt="">
-        <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/300001.jpg" alt="">
-        <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/400001.jpg" alt="">
-        <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/300001.jpg" alt="">
-        <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/200001.jpg" alt="">
-    </div>
+<!-- 相簿連結區：用縮圖表示 -->
+<div class="album-container">
+  <a class="album-card" href="hamster1_album_01.html">
+    <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/100001.jpg" alt="第1週">
+    <p>第1週 — 初到新家</p>
+  </a>
 
-    <!-- 右邊：文字敘述 -->
-    <div class="group-text">
-        <h3>第1週 — 小薯泥初到新家</h3>
-        <p>薯泥第一次探索籠子，很害羞但好奇心十足。</p>
-    </div>
+  <a class="album-card" href="hamster1_album_02.html">
+    <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/200001.jpg" alt="第2週">
+    <p>第2週 — 第一次換籠</p>
+  </a>
+
+  <a class="album-card" href="hamster1_album_03.html">
+    <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/300001.jpg" alt="第3週">
+    <p>第3週 — 運動日常</p>
+  </a>
+
+  <a class="album-card" href="hamster1_album_04.html">
+    <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/400001.jpg" alt="第4週">
+    <p>第4週</p>
+  </a>
 </div>
 
     
