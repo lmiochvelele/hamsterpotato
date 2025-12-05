@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>相簿標題</title>
+
+<style>
+    body {
+        font-family: "Microsoft JhengHei", sans-serif;
+        background: #fff8e8;
+        padding: 20px;
+        margin: 0;
+    }
+
+    /* 返回首頁按鈕 */
+    .back-btn {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        padding: 10px 20px;
+        background: #ffb74d;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 25px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* 標題 */
+    h1 {
+        margin-top: 80px;
+        text-align: center;
+        color: #d67b33;
+    }
+
+    /* 簡介區塊 */
+    .intro {
+        max-width: 800px;
+        margin: 20px auto 40px;
+        background: #FFE4CA;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        font-size: 18px;
+        line-height: 1.6;
+        color: #5b3f2b;
+    }
+
+    /* 照片 + 文字的卡片 */
+    .photo-card {
+        max-width: 800px;
+        margin: 0 auto 30px;
+        background: #fffdf7;
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .photo-card img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .photo-card p {
+        font-size: 16px;
+        color: #4b3e2a;
+        margin: 0;
+    }
+
+</style>
+</head>
+<body>
+
+<a href="上一頁.html" class="back-btn">← 返回成長日記</a>
+
+<h1>📸 相簿標題</h1>
+
+<div class="intro">
+    這裡是一段簡介，你可以描述這個相簿的大致內容、
+    拍攝時間、當時的小故事或是特別的事件。
+</div>
+
+<!-- 照片卡片（複製 10 次） -->
+<div class="photo-card">
+    <img src="你的照片1路徑.jpg" alt="">
+    <p>這張照片的說明文字</p>
+</div>
+
+<div class="photo-card">
+    <img src="你的照片2路徑.jpg" alt="">
+    <p>這張照片的說明文字</p>
+</div>
+
+<div class="photo-card">
+    <img src="你的照片3路徑.jpg" alt="">
+    <p>這張照片的說明文字</p>
+</div>
+
+<!-- 後面再自行複製 photo-card 區塊 -->
+</body>
+</html>
