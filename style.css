@@ -1,0 +1,103 @@
+
+.questionnaire {
+    margin-top: 70px; /* 調整上方間距，數字可自己調整 */
+    font-size: 24px;
+    color: #d67b33;
+    text-align: center;
+}
+/* 網頁整體字型與置中 */
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+    text-align: center;
+    background-color: #fff8e8;
+    margin: 0;
+    padding: 20px;
+}
+
+/* 標題 */
+h1 {
+    font-size: 48px;
+    margin-top: 20px;
+    color: #d67b33;
+}
+
+/* 副標 */
+p {
+    font-size: 22px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* 鼠鼠卡片排列（四宮格） */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto; /* 讓整個區塊置中 */
+}
+
+/* 每一張卡片 */
+.card {
+    text-decoration: none;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s;
+}
+
+/* 滑鼠移過時放大 */
+.card:hover {
+    transform: scale(1.2);
+}
+
+/* 鼠鼠圖片 */
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* 鼠鼠名字 */
+.card h2 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #b65c22;
+}
+iframe {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin: 20px auto;
+    display: block;
+}
+
+.photo-group {
+    display: flex;
+    gap: 20px;           /* 左右間距 */
+    margin-bottom: 50px;  /* 每組區塊間距 */
+    flex-wrap: wrap;      /* 手機版自動上下排列 */
+}
+
+/* 左邊照片區 */
+.group-photos {
+    flex: 3 1 600px;               /* 照片占多一點寬度 */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 每行 5 張照片 */
+    gap: 10px;
+}
+
+/* 右邊文字區 */
+.group-text {
+    flex: 1 1 250px;   /* 文字區占剩餘寬度 */
+    max-width: 300px;
+    text-align: left;
+}
+
+/* 照片樣式 */
+.group-photos img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
