@@ -101,42 +101,4 @@ iframe {
     border-radius: 12px;
     object-fit: cover;
 }
-/* 左右排版外框 */
-.info-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    margin: 50px auto;
-    max-width: 900px;
-}
-
-/* 基本資料卡片（左） */
-.info-card {
-    flex: 1;
-    background: #FFE4CA;
-    padding: 25px;
-    border-radius: 20px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    text-align: left;
-}
-
-.info-card h2 {
-    margin-bottom: 15px;
-    font-size: 24px;
-    color: #d67b33;
-}
-
-.info-card p {
-    font-size: 18px;
-    margin: 6px 0;
-}
-
-/* 右邊照片 */
-.info-photo img {
-    width: 320px;
-    border-radius: 20px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-
 
