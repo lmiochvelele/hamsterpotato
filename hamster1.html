@@ -142,9 +142,24 @@ padding: 25px;
   color: #5a3e2b;
 }
 
+.album-container {
+  max-width: 900px;
+  margin: 30px auto;          /* 上下間距30px，左右置中 */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;                  /* 卡片之間間距 */
+  justify-content: center;     /* 卡片置中對齊 */
+}
+
+.album-card {
+  text-decoration: none;
+  color: black;
+  font-family: 'Georgia', serif;
+}
+
 .frame {
   position: relative;
-  width: 200px;
+  width: 200px;               /* 整個相簿卡片寬度 */
   text-align: center;
 }
 
@@ -156,7 +171,7 @@ padding: 25px;
 
 .cover-img {
   position: absolute;
-  top: 15px;   /* 調整縮圖位置 */
+  top: 20px;                  /* 調整縮圖位置 */
   left: 15px;
   width: 170px;
   height: 120px;
@@ -166,13 +181,18 @@ padding: 25px;
 
 .frame p {
   position: absolute;
-  top: 140px;  /* 文字放在縮圖下方 */
+  top: 145px;                 /* 文字位置在縮圖下方 */
   width: 100%;
   margin: 0;
   font-weight: bold;
   color: #5a3e2b;
 }
-    
+
+.album-card:hover .cover-img {
+  transform: scale(1.03);
+  transition: transform 0.3s;
+}
+   
 img {
     width: 80%;
     max-width: 500px;
@@ -210,35 +230,36 @@ img {
 </div>
 
 <!-- 相簿連結區：用縮圖表示 -->
-<a class="album-card" href="hamster1_album_01.html">
+<div class="album-container">
+    <a class="album-card" href="hamster1_album_01.html">
   <div class="frame">
     <img class="frame-img" src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/book_cover_kawa.png">
     <p>第1週 — 初到新家</p>
-    <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/100001.jpg" alt="第1週">
+    <img class="cover-img" src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/100001.jpg" alt="第1週">
   </a>
 
   <a class="album-card" href="hamster1_album_01.html">
   <div class="frame">
     <img class="frame-img" src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/book_cover_kawa.png">
     <p>第2週 — 第一次換籠</p>
-    <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/200001.jpg" alt="第2週">    
+    <img class="cover-img" src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/200001.jpg" alt="第2週">    
   </a>
 
   <a class="album-card" href="hamster1_album_01.html">
   <div class="frame">
     <img class="frame-img" src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/book_cover_kawa.png">
     <p>第3週 — 運動日常</p>
-    <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/300001.jpg" alt="第3週">
+    <img class="cover-img" src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/300001.jpg" alt="第3週">
   </a>
 
   <a class="album-card" href="hamster1_album_01.html">
   <div class="frame">
     <img class="frame-img" src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/book_cover_kawa.png">
     <p>第4週</p>
-    <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/400001.jpg" alt="第4週">
+    <img class="cover-img" src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/400001.jpg" alt="第4週">
   </a>
 </div>
-
+</div>
     
 <!-- 最下面按鈕：前往畢業典禮 -->
 <a class="bottom-btn" href="hamster1_graduation.html">🎓 薯泥畢業典禮</a>
