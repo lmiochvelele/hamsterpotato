@@ -142,6 +142,36 @@ padding: 25px;
   color: #5a3e2b;
 }
 
+.frame {
+  position: relative;
+  width: 200px;
+  text-align: center;
+}
+
+.frame-img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.cover-img {
+  position: absolute;
+  top: 15px;   /* 調整縮圖位置 */
+  left: 15px;
+  width: 170px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.frame p {
+  position: absolute;
+  top: 140px;  /* 文字放在縮圖下方 */
+  width: 100%;
+  margin: 0;
+  font-weight: bold;
+  color: #5a3e2b;
+}
     
 img {
     width: 80%;
@@ -180,23 +210,30 @@ img {
 </div>
 
 <!-- 相簿連結區：用縮圖表示 -->
-<div class="album-container">
-  <a class="album-card" href="hamster1_album_01.html">
+<a class="album-card" href="hamster1_album_01.html">
+  <div class="frame">
+    <img class="frame-img" src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/book_cover_kawa.png">
     <p>第1週 — 初到新家</p>
     <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/100001.jpg" alt="第1週">
   </a>
 
-  <a class="album-card" href="hamster1_album_02.html">
+  <a class="album-card" href="hamster1_album_01.html">
+  <div class="frame">
+    <img class="frame-img" src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/book_cover_kawa.png">
     <p>第2週 — 第一次換籠</p>
     <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/200001.jpg" alt="第2週">    
   </a>
 
-  <a class="album-card" href="hamster1_album_03.html">
+  <a class="album-card" href="hamster1_album_01.html">
+  <div class="frame">
+    <img class="frame-img" src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/book_cover_kawa.png">
     <p>第3週 — 運動日常</p>
     <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/300001.jpg" alt="第3週">
   </a>
 
-  <a class="album-card" href="hamster1_album_04.html">
+  <a class="album-card" href="hamster1_album_01.html">
+  <div class="frame">
+    <img class="frame-img" src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/book_cover_kawa.png">
     <p>第4週</p>
     <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/400001.jpg" alt="第4週">
   </a>
