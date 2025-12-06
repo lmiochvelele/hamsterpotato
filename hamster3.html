@@ -12,6 +12,19 @@
     --text:#4a3629;
     --muted:#8b6f5a;
   }
+/* 左上角固定返回首頁 */
+.back-home {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ffe0b2, #ffb74d);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 
   html,body{height:100%;margin:0;}
   body{
@@ -155,7 +168,7 @@
 </style>
 </head>
 <body>
-
+<a class="back-home" href="index.html">← 回首頁</a>
 <main class="card" role="main" aria-labelledby="title">
   <div class="hamster-wrap" aria-hidden="false">
     <!-- cute hamster (inline SVG) -->
