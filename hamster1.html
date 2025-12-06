@@ -151,6 +151,33 @@ img {
     border-radius: 20px;
 }
 
+.album-divider {
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #5a3e2b;
+  margin: 40px 0 20px;
+  position: relative;
+}
+
+.album-divider::before,
+.album-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 35%;
+  height: 2px;
+  background: #d2b48c;
+}
+
+.album-divider::before {
+  left: 0;
+}
+
+.album-divider::after {
+  right: 0;
+}
 
 
 
@@ -191,6 +218,8 @@ img {
 
     
 <div class="album-container">
+
+    <div class="album-divider">年幼時期 🍼</div>
   <a class="album-card" href="hamster1_01.html">
     <p>第1週</p>
     <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/100001.jpg" alt="第1週">
@@ -216,7 +245,7 @@ img {
     <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/100001.jpg" alt="第5週">
   </a>
 
-
+<div class="album-divider">年幼時期 🍼</div>
    
 
   <a class="album-card" href="hamster1_02.html">
