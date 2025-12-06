@@ -150,6 +150,31 @@ img {
     display: block;
     border-radius: 20px;
 }
+
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 2px solid #000;
+}
+
+.divider:not(:empty)::before {
+  margin-right: 10px;
+}
+
+.divider:not(:empty)::after {
+  margin-left: 10px;
+}
+
 </style>
 </head>
 <body>
@@ -183,6 +208,9 @@ img {
 </div>
 
 <!-- 相簿連結區：文字在上方，縮圖在下方，懷舊相簿風格 -->
+
+<div class="divider">內容</div>
+    
 <div class="album-container">
   <a class="album-card" href="hamster1_01.html">
     <p>第1週</p>
@@ -208,6 +236,9 @@ img {
     <p>第5週</p>
     <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/100001.jpg" alt="第5週">
   </a>
+
+
+    <div class="divider">內容</div>
 
   <a class="album-card" href="hamster1_02.html">
     <p>第6週</p>
