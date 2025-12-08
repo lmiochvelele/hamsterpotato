@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>網頁製作中… </title>
+<meta charset="UTF-8">
+<title>薯泥成長日記</title>
 <style>
-  :root{
-    --bg:#fff7f0;
-    --card:#fff6e9;
-    --accent:#e6a85b;
-    --text:#4a3629;
-    --muted:#8b6f5a;
-  }
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff8e8;
+}
+h1 { margin-top: 60px; color: #d67b33; }
+
 /* 左上角固定返回首頁 */
 .back-home {
     position: fixed;
@@ -26,201 +26,254 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-  html,body{height:100%;margin:0;}
-  body{
-    background: linear-gradient(180deg,var(--bg), #f0e7dd);
-    font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, -apple-system, sans-serif;
-    color:var(--text);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:24px;
-  }
+/* 中間按鈕 */
+.middle-btn {
+    display: inline-block;
+    margin: 30px auto;
+    padding: 12px 28px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ffd1a4, #ff8c42);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+/* -------------------------------- */
+    /* 左右排版：基本資料 + 封面照片    */
+    /* -------------------------------- */
+    .info-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin: 10px auto;
+      max-width: 900px;
+    }
 
-  .card{
-    width:100%;
-    max-width:880px;
-    background:var(--card);
-    border-radius:20px;
-    box-shadow:0 18px 40px rgba(20,20,20,0.12);
-    padding:28px;
-    text-align:center;
-    position:relative;
-    overflow:hidden;
-  }
+    .info-card {
+      flex: 1;
+      background: #FFE4CA;
+      padding: 0px;
+      border-radius: 00px;
+      box-shadow: 0 0px 0px rgba(0,0,0,0);
+      text-align: left;
+    }
 
-  /* 小倉鼠 SVG 容器（置中） */
-  .hamster-wrap{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:18px;
-    margin-bottom:12px;
-  }
+    .info-card h2 {
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #d67b33;
+    }
 
-  /* 標題 */
-  h1{
-    margin:6px 0 6px;
-    font-size:28px;
-    letter-spacing:0.4px;
-  }
-  p.lead{
-    margin:0 0 18px;
-    color:var(--muted);
-    font-size:15px;
-  }
+    .info-card p {
+      font-size: 18px;
+      margin: 4px 0;
+    }
 
-  /* 可愛倉鼠（inline svg） */
-  svg.hamster{
-    width:120px;
-    height:120px;
-    filter: drop-shadow(0 6px 14px rgba(0,0,0,0.18));
-  }
+    .info-photo img {
+      width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
 
-  /* 動畫：倉鼠呼吸與耳朵擺動 */
-  .hamster .body{ transform-origin: center; animation: breathe 2000ms ease-in-out infinite; }
-  .hamster .ear-left, .hamster .ear-right{ transform-origin: center; animation: earwiggle 2200ms ease-in-out infinite; }
-  .hamster .eye{ transform-origin:center; animation: blink 6s steps(1) infinite;}
+ /* 整體框（健保卡式） */
+.info-box {
+max-width: 600px;
+margin: 10px auto;
+background: #FFE4CA;
+border-radius: 15px;
+box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+padding: 25px;
+}
 
-  @keyframes breathe{
-    0% { transform: scale(1); }
-    50%{ transform: scale(1.02); }
-    100%{ transform: scale(1); }
-  }
-  @keyframes earwiggle{
-    0%{ transform: rotate(0deg); }
-    50%{ transform: rotate(6deg); }
-    100%{ transform: rotate(0deg); }
-  }
-  @keyframes blink{
-    0%,97%{ transform: scaleY(1); }
-    98%{ transform: scaleY(0.07); }
-    100%{ transform: scaleY(1); }
-  }
+/* 最下面按鈕 */
+.bottom-btn {
+    display: inline-block;
+    margin: 40px auto 20px auto;
+    padding: 12px 28px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #888888, #666666);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 
-  /* loading dots */
-  .dots{
-    display:inline-flex;
-    gap:8px;
-    margin-top:8px;
-  }
-  .dot{
-    width:12px;height:12px;border-radius:50%;
-    background:var(--accent);
-    opacity:0.15;
-    transform: translateY(0);
-    animation: dotpop 900ms ease-in-out infinite;
-  }
-  .dot:nth-child(1){ animation-delay: 0ms; }
-  .dot:nth-child(2){ animation-delay: 150ms; }
-  .dot:nth-child(3){ animation-delay: 300ms; }
-  @keyframes dotpop{
-    0%{ opacity:0.15; transform:translateY(0); }
-    50%{ opacity:1; transform:translateY(-8px); }
-    100%{ opacity:0.15; transform:translateY(0); }
-  }
+/* 相簿區 */
 
-  /* info panel */
-  .panel{
-    margin-top:20px;
-    text-align:left;
-    background:rgba(255,255,255,0.9);
-    border-radius:12px;
-    padding:14px;
-    color:var(--text);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
-    font-size:14px;
-  }
+.album-container {
+  max-width: 1400px;
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
 
-  .panel strong{ color:var(--accent); }
+.album-card {
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background: #D8C09C;               /* 懷舊紙張底色 */
+  border: 4px solid #d2b48c;          /* 懷舊卡片邊框 */
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  font-family: 'Georgia', serif;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
-  /* footer links */
-  .links{
-    margin-top:16px;
-    display:flex;
-    justify-content:center;
-    gap:14px;
-    flex-wrap:wrap;
-  }
-  a.btn{
-    display:inline-block;
-    padding:10px 18px;
-    border-radius:22px;
-    text-decoration:none;
-    color:white;
-    background:var(--accent);
-    box-shadow: 0 6px 16px rgba(230,168,91,0.18);
-    font-weight:600;
-  }
-  a.ghost{
-    background:transparent;
-    color:var(--text);
-    border:2px solid rgba(0,0,0,0.06);
-    box-shadow:none;
-  }
+.album-card img {
+  width: 85%;
+  height: 170px;           /* 固定縮圖高度，統一大小 */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 8px;
+}
 
-  /* small screens */
-  @media (max-width:520px){
-    .hamster-wrap{ gap:12px; flex-direction:column; }
-    svg.hamster{ width:96px; height:96px; }
-    .panel{ font-size:13px; }
-  }
+.album-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.album-card p {
+  font-size: 25px;
+  margin: 0;
+  font-weight: bold;
+  color: #5a3e2b;
+}
+
+img {
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 20px;
+}
+
+.album-divider {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #5a3e2b;
+  margin: 40px 0 20px;
+  position: relative;
+}
+
+.album-divider::before,
+.album-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 4px;
+  background: #d2b48c;
+}
+
+.album-divider::before {
+  left: 0;
+}
+
+.album-divider::after {
+  right: 0;
+}
+
+
+
 </style>
 </head>
 <body>
+
 <a class="back-home" href="index.html">← 回首頁</a>
-<main class="card" role="main" aria-labelledby="title">
-  <div class="hamster-wrap" aria-hidden="false">
-    <!-- cute hamster (inline SVG) -->
-    <svg class="hamster" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <!-- ears -->
-      <g class="ear-left">
-        <ellipse cx="58" cy="46" rx="18" ry="20" fill="#eebd86"/>
-        <ellipse cx="62" cy="46" rx="9" ry="10" fill="#f7e6d6"/>
-      </g>
-      <g class="ear-right">
-        <ellipse cx="142" cy="46" rx="18" ry="20" fill="#eebd86"/>
-        <ellipse cx="138" cy="46" rx="9" ry="10" fill="#f7e6d6"/>
-      </g>
 
-      <!-- face / body -->
-      <g class="body">
-        <ellipse cx="100" cy="100" rx="70" ry="62" fill="#f0c99b"/>
-        <ellipse cx="100" cy="110" rx="54" ry="40" fill="#ffe9d4"/>
-      </g>
+<h1>🐹 薯泥成長日記 🐹</h1>
 
-      <!-- cheeks -->
-      <circle cx="74" cy="110" r="8" fill="#ffd2b0" />
-      <circle cx="126" cy="110" r="8" fill="#ffd2b0" />
+<!-- 中間上方按鈕：前往健檢紀錄 -->
+<a class="middle-btn" href="hamster1_health.html">🩺 薯泥健檢紀錄</a>
+<!-- ================================ -->
+  <!--        基本資料 + 封面照片       -->
+  <!-- ================================ -->
+ <div class="info-box">
+     <div class="info-wrapper">
+    <div class="info-card">
+      <h2>📌 薯泥 — 基本資料</h2>
+      <p><b>性別：</b> 男生</p>
+      <p><b>生日：</b> 2023/10/13</p>
+      <p><b>到家日：</b> 2023/11/06</p>
+      <p><b>類型：</b> 黃金鼠</p>
+      <p><b>顏色：</b> 黃色</p>
+      <p><b>2025/10/20前往吱星</b></p>
+    </div>
 
-      <!-- eyes -->
-      <g fill="#222">
-        <ellipse class="eye" cx="84" cy="96" rx="6" ry="8"/>
-        <ellipse class="eye" cx="116" cy="96" rx="6" ry="8"/>
-      </g>
-
-      <!-- nose & mouth -->
-      <path d="M98 104 q2 6 6 0" stroke="#6b3b2b" stroke-width="2" fill="none" stroke-linecap="round"/>
-      <circle cx="100" cy="102" r="3" fill="#6b3b2b"/>
-    </svg>
-
-    <!-- text -->
-    <div>
-      <h1 id="title">網頁製作中…</h1>
-      <p class="lead" style="margin:6px 0 0 0; color:var(--muted)">
-        薯波正在整理相片，馬上回來和你見面 ✨
-      </p>
-
-      <div style="margin-top:12px; text-align:center;">
-        <div class="dots" aria-hidden="true">
-          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-        </div>
-      </div>
+    <div class="info-photo">
+      <!-- 換成你的封面照位置 -->
+      <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/100001.jpg" alt="hamster1">
     </div>
   </div>
+</div>
 
+<!-- 相簿連結區：文字在上方，縮圖在下方，懷舊相簿風格 -->
+
+
+    
+<div class="album-container">
+
+    <div class="album-divider">年幼時期 🍼</div>
+  <a class="album-card" href="hamster1_01.html">
+    <p>第1週</p>
+    <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/100001.jpg" alt="第1週">
+  </a>
+
+  <a class="album-card" href="hamster1_02.html">
+    <p>第2週</p>
+    <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/200001.jpg" alt="第2週">
+  </a>
+
+  <a class="album-card" href="hamster1_03.html">
+    <p>第3週</p>
+    <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/300001.jpg" alt="第3週">
+  </a>
+
+  <a class="album-card" href="hamster1_04.html">
+    <p>第4週</p>
+    <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/400001.jpg" alt="第4週">
+  </a>
   
-</main>
+  <a class="album-card" href="hamster1_01.html">
+    <p>第5週</p>
+    <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/100001.jpg" alt="第5週">
+  </a>
 
+<div class="album-divider">青壯年 🐹</div>
+   
+
+  <a class="album-card" href="hamster1_02.html">
+    <p>第6週</p>
+    <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/200001.jpg" alt="第6週">
+  </a>
+
+  <a class="album-card" href="hamster1_03.html">
+    <p>第7週</p>
+    <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/300001.jpg" alt="第7週">
+  </a>
+
+  <a class="album-card" href="hamster1_04.html">
+    <p>第8週</p>
+    <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterpotato/main/400001.jpg" alt="第8週">
+  </a>
+
+
+</div>
+
+    
+<!-- 最下面按鈕：前往畢業典禮 -->
+<a class="bottom-btn" href="hamster1_graduation.html">🎓 薯泥畢業典禮</a>
+
+
+
+
+    
 </body>
 </html>
