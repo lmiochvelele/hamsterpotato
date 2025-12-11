@@ -49,9 +49,15 @@
     }
 
     /* 照片 + 文字的卡片 */
+    .memorial-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
     .photo-card {
-        max-width: 600px;
-        margin: 0 auto 30px;
         background: #fffdf7;
         padding: 15px;
         border-radius: 12px;
@@ -62,6 +68,8 @@
         width: 100%;
         border-radius: 10px;
         margin-bottom: 10px;
+        object-fit: cover; /* 建議加上，確保縮圖一致 */
+        height: 180px; /* 可調整縮圖高度 */
     }
 
     .photo-card p {
@@ -84,6 +92,7 @@
 </div>
 
 <!-- 照片卡片（複製 10 次） -->
+<div class="memorial-gallery">
 <div class="photo-card">
     <img src="image/hamster1/01/hamster101 (1).jpg" alt="">
     <p>從外出籠帶薯泥回家</p>
@@ -108,7 +117,8 @@
     <img src="image/hamster1/01/hamster101 (5).jpg" alt="">
     <p>薯泥挖木屑中</p>
 </div>
-
+</div>
+    
 <!-- 後面再自行複製 photo-card 區塊 -->
 </body>
 </html>
