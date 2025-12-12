@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>和泥打招呼</title>
+
+<style>
+    body {
+        font-family: "Noto Sans TC", sans-serif;
+        background: #fff8e8;
+        padding: 20px;
+        margin: 0;
+    }
+
+    /* 返回首頁按鈕 */
+   .back-home {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ffd1a4, #ff8c42);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+
+    /* 標題 */
+    h1 {
+        margin-top: 80px;
+        text-align: center;
+        color: #d67b33;
+    }
+
+    /* 簡介區塊 */
+    .intro {
+        max-width: 800px;
+        margin: 20px auto 40px;
+        background: #FFE4CA;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        font-size: 18px;
+        line-height: 1.6;
+        color: #5b3f2b;
+    }
+
+    /* 照片 + 文字的卡片 */
+    .memorial-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+    .photo-card {
+        background: #fffdf7;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .photo-card img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        object-fit: cover; /* 建議加上，確保縮圖一致 */
+        height: 300px; /* 可調整縮圖高度 */
+    }
+
+    .photo-card p {
+        font-size: 20px;
+        color: #4b3e2a;
+        margin: 0;
+        text-align: center;
+    }
+
+</style>
+</head>
+<body>
+
+<a class="back-home" href="hamster1.html">← 回薯泥成長日記</a>
+
+<h1>📸 和泥打招呼</h1>
+
+
+<div class="intro">
+    薯泥正在跟大家打招呼喔
+</div>
+
+<!-- 照片卡片（複製 10 次） -->
+<div class="memorial-gallery">
+<div class="photo-card">
+    <img src="image/hamster1/03/hamster101 (10).jpg" alt="">
+    <p>在奇怪的地方卡住了</p>
+</div>
+
+<div class="photo-card">
+    <img src="image/hamster1/03/hamster101 (13).jpg" alt="">
+    <p>可以放我出去玩嗎</p>
+</div>
+
+<div class="photo-card">
+    <img src="image/hamster1/03/hamster101 (15).jpg" alt="">
+    <p>這裡是哪裡</p>
+</div>
+
+    <div class="photo-card">
+    <img src="image/hamster1/03/hamster101 (22).jpg" alt="">
+    <p>我要出去玩了喔</p>
+</div>
+
+    <div class="photo-card">
+    <img src="image/hamster1/03/hamster101 (25).jpg" alt="">
+    <p>（微笑）</p>
+</div>
+<div class="photo-card">
+    <img src="image/hamster1/03/hamster101 (32).jpg" alt="">
+    <p>早安！</p>
+</div>
+
+<div class="photo-card">
+    <img src="image/hamster1/03/hamster102 (20).jpg" alt="">
+    <p>我真的可以出去玩嗎</p>
+</div>
+
+<div class="photo-card">
+    <img src="image/hamster1/03/hamster102 (21).jpg" alt="">
+    <p>要一起吃飯嗎</p>
+</div>
+
+    <div class="photo-card">
+    <img src="image/hamster1/03/hamster102 (22).jpg" alt="">
+    <p>（蹭）</p>
+</div>
+
+    <div class="photo-card">
+    <img src="image/hamster1/03/hamster103 (2).jpg" alt="">
+    <p>（發呆中）</p>
+</div>
+  <div class="photo-card">
+    <img src="image/hamster1/03/hamster103 (5).jpg" alt="">
+    <p>（發呆中）</p>
+</div>
+</div>
+    
+<!-- 後面再自行複製 photo-card 區塊 -->
+</body>
+</html>
