@@ -49,7 +49,7 @@ p {
 
 /* 滑鼠移過時放大 */
 .card:hover {
-    transform: scale(1.2);
+    transform: scale(1.15);
 }
 
 /* 鼠鼠圖片 */
