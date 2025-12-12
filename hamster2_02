@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>剛到家的薯泥</title>
+
+<style>
+    body {
+        font-family: "Noto Sans TC", sans-serif;
+        background: #fff8e8;
+        padding: 20px;
+        margin: 0;
+    }
+
+    /* 返回首頁按鈕 */
+   .back-home {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ffd1a4, #ff8c42);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+
+    /* 標題 */
+    h1 {
+        margin-top: 80px;
+        text-align: center;
+        color: #d67b33;
+    }
+
+    /* 簡介區塊 */
+    .intro {
+        max-width: 800px;
+        margin: 20px auto 40px;
+        background: #FFE4CA;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        font-size: 18px;
+        line-height: 1.6;
+        color: #5b3f2b;
+    }
+
+    /* 照片 + 文字的卡片 */
+    .memorial-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+    .photo-card {
+        background: #fffdf7;
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .photo-card img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        object-fit: cover; /* 建議加上，確保縮圖一致 */
+        height: 300px; /* 可調整縮圖高度 */
+    }
+
+    .photo-card p {
+        font-size: 16px;
+        color: #4b3e2a;
+        margin: 0;
+        text-align: center;
+    }
+
+</style>
+</head>
+<body>
+
+<a class="back-home" href="hamster1.html">← 回薯泥成長日記</a>
+
+<h1>📸 剛到家的薯泥</h1>
+
+
+<div class="intro">
+    剛接薯泥回家，還是這樣小小一坨黃色
+</div>
+
+<!-- 照片卡片（複製 10 次） -->
+<div class="memorial-gallery">
+<div class="photo-card">
+    <img src="image/hamster1/02/hamster101 (16).jpg" alt="">
+    <p>從外出籠帶薯泥回家</p>
+</div>
+
+<div class="photo-card">
+    <img src="image/hamster1/02/hamster101 (17).jpg" alt="">
+    <p>躲在滾輪底下，毛也還很白的樣子</p>
+</div>
+
+<div class="photo-card">
+    <img src="image/hamster1/02/hamster101 (27).jpg" alt="">
+    <p>用廁所沙的薯泥</p>
+</div>
+
+    <div class="photo-card">
+    <img src="image/hamster1/02/hamster101 (37).jpg" alt="">
+    <p>很愛擠在這邊睡覺</p>
+</div>
+
+    <div class="photo-card">
+    <img src="image/hamster1/02/hamster101 (6).jpg" alt="">
+    <p>薯泥挖木屑中</p>
+</div>
+<div class="photo-card">
+    <img src="image/hamster1/02/hamster102 (17).jpg" alt="">
+    <p>從外出籠帶薯泥回家</p>
+</div>
+
+<div class="photo-card">
+    <img src="image/hamster1/02/hamster102 (18).jpg" alt="">
+    <p>躲在滾輪底下，毛也還很白的樣子</p>
+</div>
+
+<div class="photo-card">
+    <img src="image/hamster1/02/hamster102 (24).jpg" alt="">
+    <p>用廁所沙的薯泥</p>
+</div>
+
+    <div class="photo-card">
+    <img src="image/hamster1/02/hamster102 (5).jpg" alt="">
+    <p>很愛擠在這邊睡覺</p>
+</div>
+
+    <div class="photo-card">
+    <img src="image/hamster1/02/hamster103 (11).jpg" alt="">
+    <p>薯泥挖木屑中</p>
+</div>
+</div>
+    
+<!-- 後面再自行複製 photo-card 區塊 -->
+</body>
+</html>
